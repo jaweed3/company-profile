@@ -12,7 +12,7 @@ export default function Profile() {
     <div className="text-center md:text-left">
       <h3 className="text-gray-600 mb-2 text-lg">About Us</h3>
       <h2 className="text-5xl font-bold text-gray-900 drop-shadow-md pt-6">PT MULEJATI JAYA</h2>
-      <TextAnimation className={"text-5xl font-bold text-cyan-700 drop-shadow-md pt-6"} text={"PT MULAJATI JAYA"}/>
+      <TextAnimation />
       <p className="mt-20 text-gray-700 leading-relaxed">
       PT Mulejati Jaya adalah perusahaan ekspor terkemuka yang berlokasi di Lombok, Nusa Tenggara Barat, Indonesia.
       Kami berdedikasi untuk mempromosikan kekayaan sumber daya alam Lombok ke pasar global.

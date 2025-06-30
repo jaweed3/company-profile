@@ -1,8 +1,6 @@
 'use client'
 
 import "./globals.css";
-import SplitType from "split-type";
-import TextAnimation from "@/components/RevealText";
 
 function CheckMoreButton() {
   return (
@@ -45,7 +43,6 @@ export default function Home() {
         <span className="text-sky-600 font-semibold">We connect global buyers with certified, handpicked goods — from natural spices to sustainable crafts.</span>
       </p>
     <div className="mt-8 flex justify-center gap-4">
-    <TextAnimation text={"Aku bisa"} />
       <CheckMoreButton />
       <ContactUs />
     </div>
