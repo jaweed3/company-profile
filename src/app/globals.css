@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.my-masonry-grid_column {
+  background: padding-box;
+}
+
+.my-masonry-grid_column > img {
+  margin-bottom: 16px;
+}

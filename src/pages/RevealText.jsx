@@ -1,5 +1,6 @@
+'use client'
+
 import { motion } from "framer-motion";
-console.log("motion : ", motion);
 
 export default function TextAnimation(){
   return (
@@ -11,3 +12,5 @@ export default function TextAnimation(){
   >PT MULEJATI JAYA</motion.h1>
   );
 };
+
+
