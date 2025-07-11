@@ -1,25 +1,30 @@
 "use client";
 import ProductModal from "@/components/ProductModal";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 import { useState } from "react";
 
 const productData = [
   {
     id: 1,
-    name: 'Tembakau Kasturi',
-    imageUrl: '/image1.jpeg',
+    name: 'Kopi',
+    link: '/coffee',
+    imageUrl: '/coffee1.jpeg',
     shortDescription: 'Primadona ekspor dari Lombok yang dikenal karena kualitas premiumnya. Tembakau ini memiliki karakter rasa sedikit manis dengan aroma khas yang kuat dan warna daun kuning keemasan yang menawan.',
     longDescription: 'Tembakau Kasturi adalah representasi kualitas terbaik dari tembakau Lombok di pasar internasional. Melalui proses pengeringan dan pemeraman yang sangat teliti, varietas ini menghasilkan profil rasa yang seimbang dan kompleks. Karakteristik utamanya adalah sensasi rasa yang sedikit manis di awal, diikuti oleh aroma yang kaya dan khas saat dibakar. Warnanya yang kuning keemasan bukan hanya indah dipandang, tetapi juga menjadi indikator tingkat kematangan dan kualitas pengolahan yang sempurna. Tembakau ini sangat dicari untuk bahan baku rokok premium dan sebagai bahan utama dalam berbagai racikan berkualitas tinggi.',
   },
   {
     id: 2,
-    name: 'Tembakau Virginia Lombok',
-    imageUrl: '/image2.jpeg',
+    name: 'Seafood',
+    link: '/seafood',
+    imageUrl: '/seafood1.jpeg',
     shortDescription: 'Varietas Virginia yang unik dengan aroma wangi yang khas, sering disamakan dengan aroma daun pandan. Rasanya lebih halus dan ringan, menjadikannya favorit di kalangan masyarakat lokal untuk penggunaan harian.',
     longDescription: 'Tembakau Virginia Lombok menawarkan sebuah pengalaman yang berbeda dari tembakau Virginia pada umumnya. Berkat adaptasinya dengan iklim dan tanah (terroir) khas Lombok, tembakau ini mengembangkan karakteristik unik berupa aroma wangi yang kuat seperti daun pandan. Profil rasanya yang lebih ringan dan halus memberikan sensasi merokok yang tidak terlalu berat, sehingga sangat cocok bagi pemula atau mereka yang menikmati tembakau untuk bersantai. Keunikannya ini menjadikannya primadona di pasar lokal dan memiliki potensi besar sebagai produk ekspor khusus yang menyasar pasar pencari cita rasa eksotis.',
   },
   {
     id: 3,
-    name: 'Tembakau Pait (Pahit)',
+    name: 'Tembakau',
+    link: '/tobacco',
     imageUrl: '/images3.jpeg',
     shortDescription: 'Tembakau dengan karakter yang sangat kuat, rasa cenderung pahit, dan aroma tajam. Jenis ini tidak untuk dinikmati sendiri, melainkan berfungsi sebagai "bumbu" atau campuran untuk menambah kekuatan dan karakter pada racikan.',
     longDescription: 'Tembakau Pait adalah seorang maestro di balik layar dalam dunia racikan tembakau. Seperti namanya, ia memiliki profil rasa yang kuat dan pahit dengan aroma yang menusuk. Fungsi utamanya bukanlah untuk dikonsumsi secara mandiri, melainkan sebagai komponen kunci dalam sebuah blend (campuran). Hanya dengan menambahkan sedikit Tembakau Pait, sebuah racikan yang lemah dapat langsung meningkat kekuatannya, mendapatkan "tendangan" (kick) yang solid, serta kedalaman rasa yang lebih kompleks. Bagi para peracik, Tembakau Pait adalah bahan esensial untuk menciptakan produk akhir yang berkarakter dan seimbang.',
@@ -29,6 +34,7 @@ const productData = [
 export default function Services() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleOpenModal = (product) => {
     setSelectedProduct(product);
@@ -65,11 +71,13 @@ export default function Services() {
               <p className="text-wrap text-sky-600 text-sm mb-4 flex-grow">
                 {product.shortDescription}
               </p>
+            <Link href={product.link} passHref>
               <button
-                onClick={() => handleOpenModal(product)}
+                onClick={() => redirect(product.link)}
                 className="text-white bg-sky-700 shadow-lg shadow-cyan-500/50 rounded-full px-5 py-3 font-semibold hover:scale-105 mt-6">
               View Detail
               </button>
+            </Link>
             </div>
           </div>
         ))}

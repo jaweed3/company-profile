@@ -80,8 +80,8 @@ Kami dapat menangani seluruh proses logistik secara profesional, meliputi:
 
   return (
     <div className="bg-white pb-12">
-    <div className="max-w-4xl mx-auto p-4 bg-white">
-      <h1 className="text-center mb-4 text-4xl text-sky-400 font-bold">FAQ - Mulejati</h1>
+    <div className="max-w-4xl mx-auto p-12 bg-white">
+      <h1 className="text-center mb-4 text-4xl text-sky-400 font-bold">Frequently Asked Questions</h1>
       {faqData.map((item, index) => (
       <FAQItems key={index} answer={item.answer} question={item.question} />
       ))}

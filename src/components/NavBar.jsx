@@ -18,7 +18,7 @@ export default function NavBar() {
   return (
   <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
     <div className="w-full backdrop-blur-sm bg-gradient-to-r from-sky-500/80 via-sky-400/70 to-sky-300/80 px-8 py-5 shadow-md rounded-none flex justify-center"> 
-      <Link href="#About">
+      <Link href="/">
         <Image src="/logo.png" width={100} height={15} alt="logo1" className="absolute left-10"/>
       </Link>
 

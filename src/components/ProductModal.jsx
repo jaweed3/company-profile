@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductModal({ product, isOpen, onClose }) {
   
@@ -63,10 +64,11 @@ export default function ProductModal({ product, isOpen, onClose }) {
           {product.tag2}
         </span>
       </div>
-
-      <button className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white transition hover:bg-blue-700">
-        Hubungi Untuk Penawaran
-      </button>
+      <Link href={`https://wa.me/6282236846398?text=Hello,%20I%20would%20like%20To%20Inquire%20about%20${encodeURIComponent(product.name)}%20in%20Your%20Services`} rel="noopener noreferrer" target="_blank">
+        <button className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white transition hover:bg-blue-700">
+          Hubungi Untuk Penawaran
+        </button>
+      </Link>
     </div>
     </div>
     </div>

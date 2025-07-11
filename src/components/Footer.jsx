@@ -67,12 +67,11 @@ export default function Footer() {
             <Link href={"mailto:satriyagomong@gmail.com"} target="_blank" rel="noopener noreferrer">
               <SiGmail className="text-4xl text-white hover:text-sky-300" />
             </Link>
-
           </div>
 
         {/* Bottom Bar */}
           <div className="mt-8 border-blue-600 pt-4 text-center text-xs text-blue-300">
-            &copy; {new Date().getFullYear()} PT MULEJATI JAYA. All Right Reserved.
+            &copy; {new Date().getFullYear()} CV Mule Jati. All Right Reserved.
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 'use client'
 
-import SplitText from "@/pages/TextSplit";
+import SplitText from "@/components/TextSplit";
 
 const handleAnimationComplete = () => {
   console.log('all Letter Have Animated');
@@ -16,9 +16,10 @@ export default function Profile() {
 
     {/* Left Text */}
     <div className="text-center md:text-left">
+      <div>
       <SplitText
       text="About Us"
-      className="text-2xl text-sky-600 text-center mb-10"
+      className="text-2xl text-purple-600 text-center mb-10"
       delay={100}
       duration={0.6}
       ease="power3.out"
@@ -30,8 +31,10 @@ export default function Profile() {
       textAlign="center"
       onLetterAnimationComplete={handleAnimationComplete}
       />
+      </div>
+      <div>
       <SplitText
-      text="CV Mulejati Jaya"
+      text="CV Mule Jati"
       className="text-5xl text-sky-600 font-bold text-center"
       delay={100}
       duration={0.6}
@@ -44,6 +47,7 @@ export default function Profile() {
       textAlign="center"
       onLetterAnimationComplete={handleAnimationComplete}
       />
+      </div>
       <p className="mt-10 text-sky-800 leading-relaxed">
       PT Mulejati Jaya adalah perusahaan ekspor terkemuka yang berlokasi di Lombok, Nusa Tenggara Barat, Indonesia.
       Kami berdedikasi untuk mempromosikan kekayaan sumber daya alam Lombok ke pasar global.
